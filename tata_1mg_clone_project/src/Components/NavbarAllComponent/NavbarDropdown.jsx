@@ -1,11 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { FiChevronDown } from "react-icons/fi";
-import { NavWrapper } from './Styles/NavbarDropdown.styled';
 
 function NavbarDropdown() {
   return (
-    <NavWrapper>
     <div>
       
       <div className="header_3Con">
@@ -1158,7 +1156,7 @@ function NavbarDropdown() {
     </div>
 
     </div>
-    </NavWrapper>
+   
   )
 }
 

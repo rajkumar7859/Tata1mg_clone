@@ -1,21 +1,21 @@
 import styled from "styled-components";
 
 export const NavWrapper = styled.nav`
-  
+width: 100%;
   .header_3Con {
     height: 36px;
     border-bottom: 1.5px solid var(--border);
     box-sizing: border-box;
-    /* padding: 3px 6px; */
+    
     .list {
       height: 100%;
       display: flex;
       align-items: center;
-      /* max-width: 85%; */
+     
       gap: 30px;
       margin: auto;
       justify-content: center;
-      /* border: 1px solid red; */
+     
       list-style: none;
       li {
         /* border: 1px solid red; */
@@ -30,7 +30,7 @@ export const NavWrapper = styled.nav`
         }
         &:hover {
           .link {
-            color: var(--hoverTextColor);
+            color: #ff6f61;
           }
         }
         span {
@@ -52,10 +52,12 @@ export const NavWrapper = styled.nav`
           background-color: #ffffff;
           width: auto;
           display: flex;
-          gap: 20px;
+          gap: 0px;
           padding: 15px;
           border-radius: 0 0 3px 3px;
           z-index: 10;
+          text-align: left;
+          margin-left: -10px;
           box-shadow: 0 2px 2px 0 rgb(0 0 0 / 20%);
           .vLine {
             border-left: 1px solid var(--border);
@@ -77,14 +79,14 @@ export const NavWrapper = styled.nav`
                     color: #212121;
                   }
                   font-size: 13px;
-                  color: #757575;
+                  color: black;
                 }
                 &:hover {
                   a {
                     strong {
                       color: var(--hoverTextColor);
                     }
-                    color: var(--hoverTextColor);
+                    color: #ff6f61;
                   }
                 }
               }
@@ -107,6 +109,7 @@ export const NavWrapper = styled.nav`
           padding: 15px;
           border-radius: 0 0 3px 3px;
           z-index: 10;
+          text-align: left;
           box-shadow: 0 2px 2px 0 rgb(0 0 0 / 20%);
           .vLine {
             border-left: 1px solid var(--border);
@@ -114,7 +117,7 @@ export const NavWrapper = styled.nav`
           & > div {
             width: auto;
             ul {
-              /* width: auto; */
+             
               display: flex;
               flex-direction: column;
               gap: 10px;
@@ -135,7 +138,8 @@ export const NavWrapper = styled.nav`
                     strong {
                       color: var(--hoverTextColor);
                     }
-                    color: var(--hoverTextColor);
+
+                    color: #ff6f61;
                   }
                 }
               }
@@ -194,8 +198,7 @@ export const NavWrapper = styled.nav`
   @media (max-width: 1320px) {
     //Part - 1
     .header_1Con {
-      //First div
-      //Second part
+      
       .secondPart {
         justify-content: center;
         .list {
