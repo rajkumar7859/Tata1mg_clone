@@ -4,89 +4,6 @@ import NavbarSearchBar from "./NavbarSearchBar";
 import NavbarDropdown from "./NavbarDropdown";
 import { NavWrapper } from "./Styles/NavbarDropdown.styled";
 
-// const links = [
-//   {
-//     to: "/",
-//     spanText:"",
-//     image:"	https://www.1mg.com/images/tata_1mg_logo.svg",
-//     title: ""
-//   },
-//   {
-//     to: "/",
-//     image:"",
-//     spanText:"",
-//     title: "Medicines"
-//   },
-//   {
-//     to: "/1",
-//     image:"",
-//     spanText:"safe",
-//     title: "Lab Tests"
-//   },
-//   {
-//     to: "/3",
-//     image:"",
-//       spanText:"",
-//     title: "Consult Doctors"
-//   },
-//   {
-//     to: "/4",
-//     image:"",
-//       spanText:"",
-//     title: "COVID-19"
-//   },
-//   {
-//     to: "/5",
-//     image:"",
-//       spanText:"",
-//     title: "Ayurveda"
-//   },
-//   {
-//     to: "/6",
-//     image:"",
-//     spanText:"save more",
-//     title: "Care Plan"
-//   },
-
-// ];
-
-
-// const NavLinks = [
-//   {
-//     to: "/",
-//     image:"",
-//     title: "Login / Sign up"
-//   },
-//   {
-//     to: "/3",
-//     image:"",
-//     title: "Offer"
-//   },
-//   {
-//     to: "/",
-//     image:"	https://onemg.gumlet.io/cart-icon-rebrand_vp4k0f.svg",
-//     title: ""
-//   },
-//   {
-//     to: "/3",
-//     image:"",
-//     title: "Need Helps"
-//   },
-// ];
-
-// NavLinks
-// const baseStyle = {
-//   color: "black",
-//   textDecoration: "none",
-//   textTransform: "uppercase"
-// };
-
-// const activeStyle = {
-//   color: "red",
-//   textDecoration: "none",
-//   textTransform: "uppercase"
-// };
-
 function Navbar() {
   return (
     <>
@@ -297,49 +214,7 @@ function Navbar() {
       </NavWrapper>
     
     </>
-//     <div>
-        
-// <div  style={{ border:"1px solid red" ,boxShadow: "rgba(17, 17, 26, 0.1) 0px 1px 0px", justifyContent:"space-evenly", display:"flex" }}>
-//     <div style={{ border:"1px solid black" ,display: "flex" , marginRight:"80px" }}>
-//       {links.map((item) => (
-//         <NavLink
-//         className={({ isActive }) => (isActive ? styles.activeStyle : styles.baseStyle)}
-//         //   style={({ isActive }) => (isActive ? activeStyle : styles.baseStyle)}
-//           to={item.to}
-//           key={item.to}
-//         >
-//             <div style={{ border:"1px solid red" , marginLeft:"20px" }}>
-//                 <img style={{ width:"90%" }} src={item.image} alt={item.image} />
-//             <ul>
-//                 <li className={styles.navTitle} >
-//           {item.title}
-//           <span>{item.spanText}</span>
-//                 </li>
-//             </ul>
-//             </div>
-//         </NavLink>
-//       ))}
 
-
-//       </div>
-// {
-//     NavLinks.map((secondItem)=>(<NavLink  to={secondItem.to} key={secondItem.to}>
-//         <div style={{display:"flex" , border:"1px solid black" }}>
-//             <div>
-//                 <img style={{ width:"25px" , marginTop:"9px"}} src={secondItem.image} alt={secondItem.image} />
-            
-//             <ul>
-//                 <li className={styles.secondNavlink} >{secondItem.title}</li>
-//             </ul>
-//             </div>
-//         </div>
-//     </NavLink>))
-// }
-//     </div>
-
-
-
-//  </div>
   );
 }
 
