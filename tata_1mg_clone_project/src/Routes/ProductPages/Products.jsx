@@ -2,9 +2,13 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styles from "./Products.module.css";
 import { filter_data, Products_data_func } from "../../Context/action";
+import Sidebar from "./Sidebar/Sidebar";
+import Cards from "./Cards";
+import Navbar from "../../Components/NavbarAllComponent/Navbar";
+import { LastFooter } from "../../HomeComponents/LastFooter";
 
 const Products = () => {
-    const { Product_data, isLoading, isError, Fitered_data } = useSelector(
+    const { isLoading, Fitered_data } = useSelector(
       (state) => state
     );
     console.log("Fitered_data:", Fitered_data);
@@ -19,6 +23,7 @@ const Products = () => {
   
     return (
       <>
+      <Navbar />
         <div
           style={{ display: isLoading ? "flex" : "none" }}
           className={styles.loading_div}
@@ -53,6 +58,7 @@ const Products = () => {
             </div>
           </div>
         </div>
+        <LastFooter />
       </>
     );
   };

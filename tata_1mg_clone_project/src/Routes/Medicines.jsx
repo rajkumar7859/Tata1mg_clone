@@ -1,4 +1,5 @@
 import React from 'react'
+import Navbar from '../Components/NavbarAllComponent/Navbar'
 import SilderImage from '../Components/NavbarAllComponent/SilderImage'
 import Aayurved from '../HomeComponents/Aayurved'
 import ComboDeals from '../HomeComponents/ComboProduct'
@@ -13,7 +14,10 @@ import Trending from '../HomeComponents/Trending'
 
 function Medicines() {
   return (
+    <>
+    <Navbar />
     <div style={{backgroundColor:"#edececd6"}}>
+      
        <SilderImage />
        <FeaturedBrand />
        <TopSellers />
@@ -26,6 +30,7 @@ function Medicines() {
        <FooterDcription />
        <LastFooter />
     </div>
+    </>
   )
 }
 
