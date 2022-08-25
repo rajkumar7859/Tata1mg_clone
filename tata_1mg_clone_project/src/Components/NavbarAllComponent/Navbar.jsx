@@ -1,10 +1,28 @@
-import {  Link } from "react-router-dom";
 import styles from './Styles/Navbar.module.css'
 import NavbarSearchBar from "./NavbarSearchBar";
 import NavbarDropdown from "./NavbarDropdown";
 import { NavWrapper } from "./Styles/NavbarDropdown.styled";
+// import Login from "../../Routes/Login&Signup/Login";
+import { Link, useNavigate } from "react-router-dom";
+import {useEffect, useContext } from "react";
+import { AuthContext } from "../../Context/AuthContext";
+import { useDispatch, useSelector } from 'react-redux';
+import { get_data } from '../../Context/action';
 
 function Navbar() {
+  const { isvisible, setvisible, setShow } = useContext(AuthContext);
+
+  const nevigate = useNavigate();
+  const { cartData, token, toggleAuth } = useSelector((state) => {
+    return state;
+  });
+  const dispatch = useDispatch();
+
+useEffect(() => {
+    get_data(dispatch);
+  }, []);
+
+
   return (
     <>
       <nav >
@@ -30,7 +48,7 @@ function Navbar() {
                 </div>
               </div>
               <div>
-                <Link to="/AskDoctor">Consult Doctors</Link>
+                <Link to="/">Consult Doctors</Link>
               </div>
               <div>
                 <Link to="/Covid">Covid-19</Link>
@@ -47,7 +65,7 @@ function Navbar() {
           <div className={styles.login_Signup}>
             <div style={{ display: "flex", alignItems: "center", gap: "5px" }}>
               {
-              "token" 
+              token
               ? 
               (
                 <div className={styles.user_Profile}>
@@ -131,7 +149,7 @@ function Navbar() {
                       <li className={styles.user_Profile_li}>
                         <a
                           onClick={() => {
-                            "dispatch"("Logout"());
+                            dispatch("Logout"());
                           }}
                           href=""
                           data-auto-profile-logout="true"
@@ -146,8 +164,8 @@ function Navbar() {
                 <>
                   <a
                     onClick={() => {
-                      "setshow"(true);
-                      "setvisible"(true);
+                      setShow(true);
+                      setvisible(true);
                     }}
                     className="logandsign"
                   >
@@ -157,8 +175,8 @@ function Navbar() {
                   |
                   <a 
                     onClick={() => {
-                      "setshow"(false);
-                      "setvisible"(true);
+                      setShow(false);
+                      setvisible(true);
                     }}
                     className="logandsign"
                   >
@@ -182,7 +200,7 @@ function Navbar() {
                       Order Summary
                     </span>
                     <span className="CartCounterPopUp__count___3cYl6">
-                      {"cartData".length} Item
+                      {cartData.length} Item
                     </span>
                   </li>
                   <li>
@@ -198,7 +216,7 @@ function Navbar() {
                   </li>
                 </ul>
               </div>
-              <div className={styles.count}>{"cartData".length}</div>
+              <div className={styles.count}>{cartData.length}</div>
             </div>
             <div style={{ fontSize: "14px" }}>Need Help ?</div>
           </div>
