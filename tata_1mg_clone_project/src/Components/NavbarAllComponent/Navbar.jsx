@@ -2,6 +2,7 @@ import {  Link } from "react-router-dom";
 import styles from './Styles/Navbar.module.css'
 import NavbarSearchBar from "./NavbarSearchBar";
 import NavbarDropdown from "./NavbarDropdown";
+import { NavWrapper } from "./Styles/NavbarDropdown.styled";
 
 function Navbar() {
   return (
@@ -207,7 +208,11 @@ function Navbar() {
 
       {/* **********************search bar ******************************** */}
       <NavbarSearchBar />
+
+      <NavWrapper>
       <NavbarDropdown />
+      </NavWrapper>
+    
     </>
 
   );
