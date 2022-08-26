@@ -90,4 +90,5 @@ button {
 
 .smallcontainer {
   max-width: 100%;
+  cursor: pointer;
 }

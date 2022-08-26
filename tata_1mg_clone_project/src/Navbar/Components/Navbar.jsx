@@ -48,7 +48,7 @@ useEffect(() => {
                 </div>
               </div>
               <div>
-                <Link to="/AskDoctor">CONSULT DOCTORS</Link>
+                <Link to="/">CONSULT DOCTORS</Link>
               </div>
               <div>
                 <Link to="/Covid">COVID-19</Link>
