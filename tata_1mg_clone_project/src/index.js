@@ -1,16 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter, Route, Link } from "react-router-dom";
+import { SignupProvider } from "./LoginSignup/SignupProvider";
+import { LoginProvider } from "./LoginSignup/LoginProvider";
+import { Provider } from "react-redux";
+import { store } from "./Redux/Store";
+import { AddressProvider } from "./Address/AddressApi";
+import Login_Auth from "./Redux/Login_Auth";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-    <App />
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Login_Auth>
+          <AddressProvider>
+            <App />
+          </AddressProvider>
+        </Login_Auth>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );
 
