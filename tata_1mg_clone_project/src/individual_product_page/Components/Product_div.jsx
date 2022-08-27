@@ -44,6 +44,7 @@ export const Product_div = ({
       })
       .then((data) => {
         get_data(dispatch);
+        alert("Product add successfull")
       })
       .catch((err) => console.error(err));
   };
@@ -165,7 +166,7 @@ export const Product_div = ({
                   className="add_to_cart_anc"
                   data-auto-upload-prescription="true"
                 >
-                  <span>ADD TO CART</span>
+                  <span style={{cursor:"pointer"}} >ADD TO CART</span>
                 </a>
               </div>
             </div>

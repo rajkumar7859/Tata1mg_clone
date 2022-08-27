@@ -41,7 +41,7 @@ const ProductsDelivery = () => {
     return state;
   });
 
-  React.useEffect(() => {
+  useEffect(() => {
     getData();
     getAddress();
     m = 0;
@@ -149,7 +149,7 @@ const ProductsDelivery = () => {
               </span>
             </div>
           </div>
-          <button onClick={handleSubmit}>PROCEED TO PAYMENT</button>
+          <button style={{cursor:"pointer"}} onClick={handleSubmit}>PROCEED TO PAYMENT</button>
         </div>
       </div>
       )
@@ -158,52 +158,3 @@ const ProductsDelivery = () => {
 };
 
 export default ProductsDelivery;
-{
-  /* <div>
-<div className="cartSummary">
-  <span>Item Total(MRP)</span>
-  <span id="cartSummarymrp">₹{Mtotal}</span>
-</div>
-<div className="cartSummary">
-  <span>Price Discount</span>
-  <span id="cartSummaryDiscount">-₹{Dtotal.toFixed(2)}</span>
-</div>
-<hr />
-<div className="cartSummary">
-  <span>Shipping Fee</span>
-  <span id="cartSummaryShippingFee">
-    As per delivery address
-  </span>
-</div>
-<hr />
-<div className="cartSummary" id="fontbold">
-  <span>To be paid</span>
-  <span id="cartSummaryToBePaid">₹{Ptotal.toFixed(2)}</span>
-</div>
-<div id="cartTotalSavings">
-  <span id="totalSavingFont">Total Savings</span>
-  <span id="totalSavingGreen">₹{Dtotal.toFixed(2)}</span>
-</div>
-</div>
-
-
-<div id="checkoutBox">
-<div id="deliveryLocation">
-  <div>Your delivery location</div>
-  <div>
-    <i
-      className="material-icons location_icon"
-      style={{ fontSize: "12px" }}
-    >
-      &#xe0c8;
-    </i>
-    <span>New Delhi</span>
-  </div>
-</div>
-<div id="checkoutButton">
-  <Link href="/AddAddress" id="a">
-    CHECKOUT
-  </Link>
-</div>
-</div> */
-}
