@@ -71,7 +71,7 @@ export const Navbar_search = () => {
           <div className="upload_btn">
             <Link
               className="upload_anc"
-              to="/Upload"
+              to="/"
               data-auto-upload-prescription="true"
             >
               <span>Upload</span>

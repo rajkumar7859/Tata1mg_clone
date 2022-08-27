@@ -42,7 +42,7 @@ useEffect(() => {
                 <Link  to="/">MEDICINES</Link>
               </div>
               <div>
-                <Link to="/LabTests">LAB TESTS</Link>
+                <Link to="/">LAB TESTS</Link>
                 <div className="reddiv Safe_div">
                   <div>SAFE</div>
                 </div>
@@ -51,13 +51,13 @@ useEffect(() => {
                 <Link to="/">CONSULT DOCTORS</Link>
               </div>
               <div>
-                <Link to="/Covid">COVID-19</Link>
+                <Link to="/">COVID-19</Link>
               </div>
               <div>
                 <Link to="/Ayurveda">AYURVEDA</Link>
               </div>
               <div>
-                <Link to="/CarePlan">CARE PLAN</Link>
+                <Link to="/">CARE PLAN</Link>
                 <div className="reddiv">SAVE MORE</div>
               </div>
             </div>
