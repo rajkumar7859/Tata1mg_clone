@@ -1,5 +1,7 @@
- Depolyment Link ( https://tata-1mg-clone-project-rajkumar7859.vercel.app/ )
+
 # Getting Started with Create React App
+
+ Depolyment Link ( https://tata-1mg-clone-project-rajkumar7859.vercel.app/ )
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
