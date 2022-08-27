@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext,useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import CardsPay from "./CardsPay";
 import styles from "./payment.module.css";
@@ -12,10 +12,10 @@ const Payment = () => {
   const [comp, setComp] = useState("Wallet");
   const { Otpvisible, setOtpVisible } = useContext(AuthContext);
 
-  const [Mtotal, setMtotal] = React.useState(0);
-  const [Dtotal, setDtotal] = React.useState(0);
-  const [Ptotal, setPtotal] = React.useState(0);
-  const [change, setChange] = React.useState(false);
+  const [Mtotal, setMtotal] =useState(0);
+  const [Dtotal, setDtotal] =useState(0);
+  const [Ptotal, setPtotal] =useState(0);
+  const [change, setChange] =useState(false);
   let m = 0;
   let p = 0;
   let d = 0;
@@ -24,7 +24,7 @@ const Payment = () => {
     return state;
   });
 
-  React.useEffect(() => {
+  useEffect(() => {
     m = 0;
     p = 0;
     d = 0;
@@ -40,6 +40,8 @@ const Payment = () => {
   }, [change, cartData]);
   const handleSubmit = () => {
     setOtpVisible(true);
+    alert("Order Place successfull")
+    navigate("/")
   };
   const handleChange = () => {
     setComp("Wallet");
@@ -139,7 +141,7 @@ const Payment = () => {
               <span id="totalSavingGreen">₹{Dtotal.toFixed(2)}</span>
             </div>
           </div>
-          <button onClick={handleSubmit}>Place Order</button>
+          <button style={{cursor:"pointer"}} onClick={handleSubmit}>Place Order</button>
         </div>
       </div>
     </div>

@@ -68,7 +68,7 @@ const AddAddress = () => {
           <Link to="/Address">+ ADD NEW ADDRESS</Link>
         </div>
         <br />
-        <button type="submit" onClick={handleSubmit}>
+        <button style={{cursor:"pointer"}} type="submit" onClick={handleSubmit}>
           CONTINUE
         </button>
       </form>

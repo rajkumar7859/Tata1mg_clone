@@ -44,7 +44,7 @@ const Delivery = () => {
         <div className={styles.box2}>
           <div className={styles.header}>
             <h2>Select Address</h2>
-            <button>CHANGE</button>
+            <button style={{cursor:"pointer"}} >CHANGE</button>
           </div>
           <div className={styles.address}>
             {address && (
@@ -60,7 +60,7 @@ const Delivery = () => {
               </div>
             )}
           </div>
-          <button onClick={handleSubmit}>CONTINUE</button>
+          <button style={{cursor:"pointer"}} onClick={handleSubmit}>CONTINUE</button>
         </div>
         {/* <div className={styles.address}></div>
         <button>CONTINUE</button> */}

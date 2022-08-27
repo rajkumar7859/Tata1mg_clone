@@ -40,6 +40,7 @@ const Cart_product = ({
           .then((data) => {
             // console.log("data:", data);
             get_data(dispatch);
+          window.location.reload()
           })
           .catch((err) => console.error(err));
       })
