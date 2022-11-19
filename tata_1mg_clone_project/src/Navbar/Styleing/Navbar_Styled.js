@@ -288,4 +288,24 @@ export const Nav = styled.div`
       }
     }
   }
+.parentResBtn{
+  display:none
+}
+.mobileBtn[name="resposcrossBtn"]{
+  display:none;
+}
+
+@media (max-width:980PX)
+{
+  .navbar {
+  position:relative
+  }
+
+  .parentResBtn{
+    display:block;
+    z-index:9999;
+    border:3px solid red;
+    font-size:3rem
+  }
+}
 `;

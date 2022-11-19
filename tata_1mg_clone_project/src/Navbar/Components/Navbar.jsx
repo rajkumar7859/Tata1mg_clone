@@ -4,6 +4,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { get_data, Logout } from "../../Redux/actions";
 import { AuthContext } from "../../Redux/Login_Auth";
+import {HiMenuAlt3} from 'react-icons/hi'
+import {GrClose} from 'react-icons/gr'
 
 
 
@@ -217,6 +219,10 @@ useEffect(() => {
             </div>
             <div style={{ fontSize: "14px" }}>Need Help ?</div>
           </div>
+        <div className="parentResBtn">
+        <div className="mobileBtn"><HiMenuAlt3 name="resposmenuBtn" /></div>
+        <div className="mobileBtn"><GrClose name="resposcrossBtn" /></div>
+        </div>
         </div>
       </Nav>
     </>
