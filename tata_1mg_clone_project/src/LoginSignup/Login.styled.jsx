@@ -101,6 +101,37 @@ export const Blok = styled.div`
     font-size: 18px;
     background: #fff;
   }
+
+  @media (max-width:980px){
+    
+    > div {
+      width: 35rem;
+      height: 63%;
+      background: white;
+    }
+    .swiper-wrapper {
+      width: 16rem;
+    }
+  }
+
+  @media (max-width:500px){
+    > div {
+      display: block;
+      overflow-y: scroll;
+      width: 25rem;
+      margin-left: -3rem;
+    }
+    .swiper-wrapper {
+      width: 16rem;
+    }
+    > div {
+      width:auto;
+    }
+    > div {
+      width: 500px;
+  
+    }
+  }
 `;
 
 export const Form_container = styled.div`
@@ -229,4 +260,17 @@ export const Form_container = styled.div`
       }
     }
   }
+
+  @media (max-width:980px){
+    > div:nth-of-type(1) {
+      width: auto;
+      }
+  }
+
+  @media (max-width:500px){
+    > div:nth-of-type(1) {
+      width: auto;
+      }
+  }
+
 `;

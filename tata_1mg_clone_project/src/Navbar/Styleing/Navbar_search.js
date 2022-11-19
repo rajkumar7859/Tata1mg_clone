@@ -34,8 +34,6 @@ export const Nav_Search = styled.div`
   }
 
   .upload_btn {
-    /* border: red solid; */
-    padding: 5px 10px;
     border-radius: 4px;
     background-color: #ff6f61;
     padding: 10px;
@@ -112,4 +110,42 @@ export const Nav_Search = styled.div`
     background-color: #f1f4f6;
     display: inline;
   }
+
+
+  // ***************************respos start*****************
+
+  @media (max-width:980px)
+  {
+    .search_bar {
+      width:-1rem;
+    }
+    .search_bar_innerdiv {
+      width: auto;
+    }
+    .upload_btn {
+      padding: 5px;
+      margin-left: 5px;
+      width: 110px;
+    }
+  
+  
+  }
+  @media (max-width:450px)
+  {
+    .search_bar {
+      width:-1rem;
+    }
+    .search_bar_innerdiv {
+      width: auto;
+    }
+    .upload_btn {
+      padding: 5px;
+      margin-left: 5px;
+      width: 110px;
+    }
+  
+  
+  }
+
+  // ***************************respos end*****************
 `;

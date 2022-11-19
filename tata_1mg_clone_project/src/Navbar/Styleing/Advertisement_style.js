@@ -1,13 +1,12 @@
 import styled from "styled-components";
 
 export const Add_div = styled.div`
-  max-width: 1920px;
+
   margin: auto;
   display: flex;
   justify-content: center;
 
   > div:nth-of-type(1) {
-    min-width: 768px;
     width: 66.66666667%;
   }
 
@@ -85,6 +84,7 @@ export const Heading_div = styled.div`
     font-weight: 400;
     color: #666;
   }
+
 `;
 
 export const CarePlan_div = styled.div`

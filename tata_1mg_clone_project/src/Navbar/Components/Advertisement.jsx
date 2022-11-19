@@ -7,14 +7,29 @@ import {
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-
-// import "./styles.css";
-
-// import required modules
 import { Pagination, Autoplay } from "swiper";
+
+
+const sliderImg=[
+  {
+    imageLink:"https://onemg.gumlet.io/9632fa8b-10d0-48f3-b76b-1d360a7385f3_1661251278.jpg?w=899&h=200&format=auto"
+  },
+  {
+    imageLink:"https://onemg.gumlet.io/a_ignore,w_899,h_200,c_fit,q_auto,f_auto/lg5cfkmouja5mdf9itws.png"
+  },
+  {
+    imageLink:"https://onemg.gumlet.io/a_ignore,w_899,h_200,c_fit,q_auto,f_auto/a7v2ipno4azmdu6cnjuu.png"
+  },
+  {
+    imageLink:"https://onemg.gumlet.io/a_ignore,w_899,h_200,c_fit,q_auto,f_auto/kcdcsb5yrkpxok5bpm8y.png"
+  },
+  {
+    imageLink:"https://onemg.gumlet.io/image/upload/w_899,h_200,,a_ignore,q_auto,f_auto/v1651478982/txwuakgo0hozrepgde4b.jpg"
+  }
+]
+
 
 const Advertisement = () => {
   return (
@@ -27,37 +42,14 @@ const Advertisement = () => {
             autoplay={{ delay: 5000 }}
             className="mySwiper"
           >
-            <SwiperSlide>
+            {
+              sliderImg?.map((item)=> <SwiperSlide key={item.imageLink}>
               <img
-                src="	https://onemg.gumlet.io/9632fa8b-10d0-48f3-b76b-1d360a7385f3_1661251278.jpg?w=899&h=200&format=auto"
-                alt=""
+                src={item.imageLink}
               />
             </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="	https://onemg.gumlet.io/a_ignore,w_899,h_200,c_fit,q_auto,f_auto/lg5cfkmouja5mdf9itws.png"
-                alt=""
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="https://onemg.gumlet.io/a_ignore,w_899,h_200,c_fit,q_auto,f_auto/a7v2ipno4azmdu6cnjuu.png"
-                alt=""
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="	https://onemg.gumlet.io/a_ignore,w_899,h_200,c_fit,q_auto,f_auto/kcdcsb5yrkpxok5bpm8y.png"
-                alt=""
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="https://onemg.gumlet.io/image/upload/w_899,h_200,,a_ignore,q_auto,f_auto/v1651478982/txwuakgo0hozrepgde4b.jpg"
-                alt=""
-              />
-            </SwiperSlide>
-      
+            )
+            }
           </Swiper>
         </div>
         <div>

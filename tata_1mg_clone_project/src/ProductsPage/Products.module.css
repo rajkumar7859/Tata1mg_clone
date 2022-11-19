@@ -95,3 +95,33 @@
     transform: rotate(1turn);
   }
 }
+
+
+@media (max-width:980px){
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width:500px){
+.container {
+  grid-template-columns: repeat(1,15rem);
+}
+
+.Main_container > div:nth-of-type(2) > div:nth-of-type(1) > div > select {
+  width: 108px;
+}
+
+.Main_container > div:nth-of-type(2) > div:nth-of-type(1) > div > span {
+  width: 45px;
+  margin-right: -20px;
+}
+
+.Main_container > div:nth-of-type(2) > div:nth-of-type(1) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6px;
+}
+
+}

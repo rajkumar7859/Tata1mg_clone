@@ -91,3 +91,19 @@ button {
 .smallcontainer {
   max-width: 100%;
 }
+
+
+@media (max-width:980px)
+  {
+    
+    .bigcontainer {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+@media (max-width:500px)
+  {
+    
+    .bigcontainer {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }

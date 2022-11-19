@@ -672,3 +672,29 @@ form {
   margin-right: 12px;
   margin-bottom: 0;
 }
+
+.footerApp{
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (max-width:980px){
+  .style__auth-bar___bYPU8 {
+    display: block;
+  }
+  .footerApp{
+    margin: auto;
+    width: 10rem;
+    display: block;
+  }
+}
+@media (max-width:500px){
+  .style__auth-bar___bYPU8 {
+    display: block;
+  }
+  .footerApp{
+    margin: auto;
+    width: 10rem;
+    display: block;
+  }
+}

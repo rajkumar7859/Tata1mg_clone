@@ -292,7 +292,7 @@ export const Nav = styled.div`
 .show-menu-btn,
 .hide-menu-btn {
   transition: 0.4s;
-  font-size: 45px;
+  font-size: 35px;
   cursor: pointer;
   user-select: none;
   display: none;
@@ -317,38 +317,6 @@ export const Nav = styled.div`
 
 @media (max-width:980px)
 {
-  // .navbarlogo_tabs {
-  //   display: block;
-  //   align-items: center;
-  //   height: fit-content;
-  // }
-
-  // #logo {
-  //   position: relative;
-  // }
-
-  // .logo_img {
-  //   height: 35px;
-  // }
-
-  // #tabs {
-  //   display: block;
-  //   gap: 15px;
-  //   color: #212121;
-  //   box-sizing: border-box;
-  //   padding: 13px 14px 14px;
-  //   box-sizing: border-box;
-  // }
-
-  // #tabs > div {
-  //   display: block;
-  //   gap: 5px;
-  //   align-items: center;
-  //   font-size: 15px;
-  //   font-weight: 700;
-  //   cursor: pointer;
-  // }
-
 // ***************************************************************************************
 
 .show-menu-btn,
@@ -359,7 +327,6 @@ export const Nav = styled.div`
     display: block;
     position: fixed;
     width: 100%;
-    height: 100vh;
     background: white;
     right: -100%;
     top: 0;
@@ -373,7 +340,10 @@ export const Nav = styled.div`
     display: block;
     padding: 20px;
   }
-
+  #tabs > div {
+    font-size: 25px;
+    font-weight: 800;
+  }
   .hide-menu-btn {
     position: absolute;
     top: 30px;
@@ -384,5 +354,101 @@ export const Nav = styled.div`
   }
 
 // ***************************************************************************************
+
+
+.reddiv {
+  height: 0;
+  box-sizing: none;
+  display: none;
+  background: none;
+  color: none;
+  margin-top: -3rem;
+  font-size: 0;
+  align-items: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+.Safe_div {
+  > div {
+    display:none;
+  }
+}
+
+.Safe_div::before {
+ display:none;
+}
+
+.Safe_div::after {
+display:none;
+}
+}
+@media (max-width:450px)
+{
+// ***************************************************************************************
+
+.show-menu-btn,
+  .hide-menu-btn {
+    display: block;
+  }
+  #tabs {
+    display: block;
+    position: fixed;
+    width: 100%;
+    background: white;
+    right: -100%;
+    top: 0;
+    text-align: center;
+    padding: 80px 0;
+    line-height: normal;
+    transition: 0.7s;
+    z-index: 3;
+  }
+  #tabs div {
+    display: block;
+    padding: 20px;
+  }
+  #tabs > div {
+    font-size: 25px;
+    font-weight: 800;
+  }
+  .hide-menu-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+  }
+  #chk:checked ~ #tabs {
+    right: 0;
+  }
+
+// ***************************************************************************************
+
+
+.reddiv {
+  height: 0;
+  box-sizing: none;
+  display: none;
+  background: none;
+  color: none;
+  margin-top: -3rem;
+  font-size: 0;
+  align-items: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+.Safe_div {
+  > div {
+    display:none;
+  }
+}
+
+.Safe_div::before {
+ display:none;
+}
+
+.Safe_div::after {
+display:none;
+}
 }
 `;

@@ -49,25 +49,25 @@ useEffect(() => {
             </div>
             <div id="tabs">
               <div   >
-                <Link  to="/">MEDICINES</Link>
+                <Link  to="/Ayurveda">MEDICINES</Link>
               </div>
               <div>
-                <Link to="/">LAB TESTS</Link>
+                <Link to="/Ayurveda">LAB TESTS</Link>
                 <div className="reddiv Safe_div">
                   <div>SAFE</div>
                 </div>
               </div>
               <div>
-                <Link to="/">CONSULT DOCTORS</Link>
+                <Link to="/Ayurveda">CONSULT DOCTORS</Link>
               </div>
               <div>
-                <Link to="/">COVID-19</Link>
+                <Link to="/Ayurveda">COVID-19</Link>
               </div>
               <div>
                 <Link to="/Ayurveda">AYURVEDA</Link>
               </div>
               <div>
-                <Link to="/">CARE PLAN</Link>
+                <Link to="/Ayurveda">CARE PLAN</Link>
                 <div className="reddiv">SAVE MORE</div>
               </div>
               {/* ***************************resp btn end*********************** */}

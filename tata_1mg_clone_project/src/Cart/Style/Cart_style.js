@@ -423,4 +423,34 @@ export const Cart_div = styled.div`
   .swiper-button-disabled::after {
     background-image: none;
   }
+
+
+  @media (max-width:980px){
+    #search {
+      display: flex;
+      margin-right: 0;
+    }
+    #inputheader {
+      width: 23rem;
+    }
+  }
+  @media (max-width:500px){
+    #search {
+      display: flex;
+      margin-right: 0;
+    }
+    #inputheader {
+      width: 11rem;
+    }
+  #carePlusButton {
+    display:block;
+  }
+  
+  
+  #carePlusButton > div:last-child {
+    margin-left: -1px;
+}
+
+  }
+
 `;

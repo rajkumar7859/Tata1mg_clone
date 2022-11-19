@@ -66,7 +66,7 @@ export default function LastFooter() {
             </div>
           </div>
 
-          <div style={{ display: "flex", justifyContent: "space-around" }}>
+          <div className="footerApp">
             <div className="style__main-link-bar___12igi">
               <div className="style__main-content___2sd49">Know Us</div>
               <ul>
