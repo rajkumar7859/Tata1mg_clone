@@ -30,6 +30,14 @@ useEffect(() => {
       <Nav>
         <div className="navbar">
           <div className="navbarlogo_tabs">
+              {/* ************resposi start********************* */}
+              
+              <input type="checkbox" id="chk" />
+                    <label htmlFor="chk" className="show-menu-btn">
+                      <HiMenuAlt3 />
+                    </label>
+              
+              {/* ************resposi end******************** */}
             <div id="logo">
               <Link to="/">
                 <img
@@ -62,6 +70,13 @@ useEffect(() => {
                 <Link to="/">CARE PLAN</Link>
                 <div className="reddiv">SAVE MORE</div>
               </div>
+              {/* ***************************resp btn end*********************** */}
+              
+              <label htmlFor="chk" className="hide-menu-btn">
+                        <GrClose />
+                      </label>
+              
+              {/* ***************************resp btn end*********************** */}
             </div>
           </div>
           <div id="loginSignup">
@@ -213,16 +228,16 @@ useEffect(() => {
                       </span>
                     </Link>
                   </li>
+
+
                 </ul>
               </div>
               <div className="count">{cartData.length}</div>
             </div>
             <div style={{ fontSize: "14px" }}>Need Help ?</div>
           </div>
-        <div className="parentResBtn">
-        <div className="mobileBtn"><HiMenuAlt3 name="resposmenuBtn" /></div>
-        <div className="mobileBtn"><GrClose name="resposcrossBtn" /></div>
-        </div>
+
+
         </div>
       </Nav>
     </>

@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const Nav = styled.div`
-  min-width: 1241px;
-
   > * {
     font-family: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
@@ -288,24 +286,103 @@ export const Nav = styled.div`
       }
     }
   }
-.parentResBtn{
-  display:none
-}
-.mobileBtn[name="resposcrossBtn"]{
-  display:none;
+
+// ************************************************************************************
+
+.show-menu-btn,
+.hide-menu-btn {
+  transition: 0.4s;
+  font-size: 45px;
+  cursor: pointer;
+  user-select: none;
+  display: none;
 }
 
-@media (max-width:980PX)
+.show-menu-btn {
+  margin-left: auto;
+}
+
+.show-menu-btn i {
+  line-height: 100px;
+}
+
+#chk {
+  position: absolute;
+  visibility: hidden;
+  z-index: -1111;
+}
+
+
+// ************************************************************************************
+
+@media (max-width:980px)
 {
-  .navbar {
-  position:relative
+  // .navbarlogo_tabs {
+  //   display: block;
+  //   align-items: center;
+  //   height: fit-content;
+  // }
+
+  // #logo {
+  //   position: relative;
+  // }
+
+  // .logo_img {
+  //   height: 35px;
+  // }
+
+  // #tabs {
+  //   display: block;
+  //   gap: 15px;
+  //   color: #212121;
+  //   box-sizing: border-box;
+  //   padding: 13px 14px 14px;
+  //   box-sizing: border-box;
+  // }
+
+  // #tabs > div {
+  //   display: block;
+  //   gap: 5px;
+  //   align-items: center;
+  //   font-size: 15px;
+  //   font-weight: 700;
+  //   cursor: pointer;
+  // }
+
+// ***************************************************************************************
+
+.show-menu-btn,
+  .hide-menu-btn {
+    display: block;
+  }
+  #tabs {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    right: -100%;
+    top: 0;
+    text-align: center;
+    padding: 80px 0;
+    line-height: normal;
+    transition: 0.7s;
+    z-index: 3;
+  }
+  #tabs div {
+    display: block;
+    padding: 20px;
   }
 
-  .parentResBtn{
-    display:block;
-    z-index:9999;
-    border:3px solid red;
-    font-size:3rem
+  .hide-menu-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
   }
+  #chk:checked ~ #tabs {
+    right: 0;
+  }
+
+// ***************************************************************************************
 }
 `;

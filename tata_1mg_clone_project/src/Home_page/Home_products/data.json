@@ -64,16 +64,5 @@
     "sellingPrice": "₹ 284.00",
     "discount": "29%off",
     "star": 4.3
-  },
-  {
-    "id": 7,
-    "title": "HealthVit Zinc Gluconate 50mg Capsule",
-    "info": "bottle of 60 capsules",
-    "rating": "24rating",
-    "imgURL": "https://onemg.gumlet.io/image/upload/a_ignore,w_100,h_100,c_fit,q_auto,f_auto/v1601297476/vzkfjqf8wpgvnughy8ph.jpg",
-    "mrp": "₹ 700.00",
-    "sellingPrice": "₹ 516.00",
-    "discount": "26%off",
-    "star": 3.2
   }
 ]
