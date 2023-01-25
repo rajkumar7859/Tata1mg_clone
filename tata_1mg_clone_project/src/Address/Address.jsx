@@ -14,7 +14,7 @@ const Address = () => {
 
   const add = async (data) => {
     let response = await fetch(
-      `https://mock-test-8th-json-server.herokuapp.com/api/address`,
+      `https://mock-coding.onrender.com/address`,
       {
         method: "POST",
         headers: { "content-type": "application/json" },

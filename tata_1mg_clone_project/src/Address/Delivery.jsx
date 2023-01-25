@@ -9,11 +9,9 @@ const Delivery = () => {
   const { id } = useContext(AddressContext);
   const navigate = useNavigate();
   const getAddress = async () => {
-    // let res = await fetch(`https://mock-test-8th-json-server.herokuapp.com/api/address?id=${id}`);
-    // let address1 = await res.json();
-    //  console.log(address1)
+ 
     axios
-      .get(`https://mock-test-8th-json-server.herokuapp.com/api/address/${id}`)
+      .get(`https://mock-coding.onrender.com/address/${id}`)
       .then((res) => {
         //  console.log(res.data)
         setAddress(res.data);
@@ -62,8 +60,7 @@ const Delivery = () => {
           </div>
           <button style={{cursor:"pointer"}} onClick={handleSubmit}>CONTINUE</button>
         </div>
-        {/* <div className={styles.address}></div>
-        <button>CONTINUE</button> */}
+       
       </div>
     </div>
   );

@@ -7,8 +7,9 @@ import { AuthContext } from "../Redux/Login_Auth";
 import styles from "./Cards.module.css";
 const Cards = ({ value }) => {
   // console.log(value);
+  
   const { isvisible, setvisible } = useContext(AuthContext);
-  const { name, desc, image_url, mrp, off, price, review, star, id } = value;
+  const { title, desc, image, mrp, off, price, review, star, id } = value;
 
   const { token } = useSelector((state) => {
     // console.log(state);
@@ -16,16 +17,18 @@ const Cards = ({ value }) => {
   });
   const dispatch = useDispatch();
 
+  // const notify = () => toast("Wow so easy!");
+
   const handleADD = () => {
     if (!token) {
       return setvisible(true);
     }
 
     axios
-      .post(`https://mock-test-8th-json-server.herokuapp.com/api/Cart`, {
+      .post(`https://mock-coding.onrender.com/Cart`, {
         qty: 1,
-        image_url,
-        name,
+        image,
+        title,
         desc,
         mrp,
         price,
@@ -33,6 +36,7 @@ const Cards = ({ value }) => {
       })
       .then((data) => {
         get_data(dispatch);
+        alert("Product added successfuly")
       })
       .catch((err) => console.error(err));
   };
@@ -44,10 +48,10 @@ const Cards = ({ value }) => {
         to={`/Products/${"Featured"}/${id}`}
       ></Link>
       <div className={styles.imge}>
-        <img src={image_url} alt={name} />
+        <img src={image} alt={title} />
       </div>
       <div className={styles.box2}>
-        <div>{name}</div>
+        <div>{title}</div>
         <div>{desc}</div>
         <div className={styles.flexGrenn}>
           <div>
@@ -80,6 +84,7 @@ const Cards = ({ value }) => {
         </div>
       </div>
     </div>
+
   );
 };
 

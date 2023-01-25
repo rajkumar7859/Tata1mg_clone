@@ -29,7 +29,7 @@ export const Single_slider_product = ({
     }
 
     axios
-      .post(`https://mock-test-8th-json-server.herokuapp.com/api/Cart`, {
+      .post(`https://mock-coding.onrender.com/Cart`, {
         qty: 1,
         image_url,
         name,

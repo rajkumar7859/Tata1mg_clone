@@ -10,7 +10,8 @@ const ProductsDelivery = () => {
   const navigate = useNavigate();
   const getData = async () => {
     let res = await fetch(
-      `https://mock-test-8th-json-server.herokuapp.com/api/Cart`
+      `https://mock-coding.onrender.com/Cart`
+      // `https://mock-test-8th-json-server.herokuapp.com/api/Cart`
     );
     let data1 = await res.json();
     //  console.log(data1)
@@ -20,7 +21,7 @@ const ProductsDelivery = () => {
   const { id } = useContext(AddressContext);
   const getAddress = async () => {
     axios
-      .get(`https://mock-test-8th-json-server.herokuapp.com/api/address/${id}`)
+      .get(`https://mock-coding.onrender.com/address/${id}`)
       .then((res) => {
         console.log(res.data);
         setAddress(res.data);
@@ -73,7 +74,7 @@ const ProductsDelivery = () => {
                       <img src={el.image} alt="" />
                     </div>
                     <div>
-                      <h6>{el.name}</h6>
+                      <h6>{el.title}</h6>
                       <p>{el.bottle}</p>
                     </div>
                   </div>

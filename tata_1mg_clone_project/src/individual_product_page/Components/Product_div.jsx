@@ -8,8 +8,8 @@ import { AuthContext } from "../../Redux/Login_Auth";
 import { Upper_div } from "../Styles/Product";
 
 export const Product_div = ({
-  image_url,
-  name,
+  image,
+  title,
   desc,
   mrp,
   price,
@@ -33,10 +33,10 @@ export const Product_div = ({
     }
 
     axios
-      .post(`https://mock-test-8th-json-server.herokuapp.com/api/Cart`, {
+      .post(`https://mock-coding.onrender.com/Cart`, {
         qty: 1,
-        image_url,
-        name,
+        image,
+        title,
         desc,
         mrp,
         price,
@@ -54,15 +54,15 @@ export const Product_div = ({
       <Upper_div>
         <div>
           <div className="Swiper_image">
-            <img src={image_url} alt="product_img" />
+            <img src={image} alt="product_img" />
           </div>
           <div className="Image_div">
-            <img src={image_url} alt="product_img" />
+            <img src={image} alt="product_img" />
           </div>
         </div>
         <div>
           <div className="title">
-            <h1>{name}</h1>
+            <h1>{title}</h1>
             <p>Adthera Consumer Brands Pvt Ltd</p>
           </div>
           <div className="highlights">

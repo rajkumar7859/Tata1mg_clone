@@ -17,7 +17,8 @@ import axios from "axios";
 export const get_data = (dispatch) => {
   dispatch({ type: LOADING });
   axios
-    .get("https://mock-test-8th-json-server.herokuapp.com/api/Cart")
+    .get("https://mock-coding.onrender.com/Cart")
+    // .get("https://mock-test-8th-json-server.herokuapp.com/api/Cart")
     .then((payload) => {
       dispatch({ type: ADD_TO_CART, payload: payload.data });
     })
@@ -29,7 +30,8 @@ export const get_data = (dispatch) => {
 export const Products_data_func = (dispatch) => {
   dispatch({ type: LOADING });
   axios
-    .get(`https://mock-test-8th-json-server.herokuapp.com/api/Featured`)
+    .get(`https://mock-coding.onrender.com/Featured`)
+    // .get(`https://mock-test-8th-json-server.herokuapp.com/api/Featured`)
     .then((response) => {
       dispatch({ type: GET_PRODUCTS, payload: response.data });
     })

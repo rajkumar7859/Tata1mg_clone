@@ -7,12 +7,13 @@ import { Cart_product_style } from "../Style/Cart_Product_style";
 // import { Cart_products } from "./Medora.styled";
 
 const Cart_product = ({
-  name,
+  title,
   mrp,
   price,
   desc,
   id,
   qty,
+  image,
   varChange,
   funcChange,
 }) => {
@@ -27,7 +28,7 @@ const Cart_product = ({
   const handleDelete = () => {
     axios
       .delete(
-        `https://mock-test-8th-json-server.herokuapp.com/api/Cart/${id}`,
+        `https://mock-coding.onrender.com/Cart/${id}`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -36,7 +37,7 @@ const Cart_product = ({
       )
       .then((data) => {
         axios
-          .get("https://mock-test-8th-json-server.herokuapp.com/api/Cart/posts")
+          .get("https://mock-coding.onrender.com/post")
           .then((data) => {
             // console.log("data:", data);
             get_data(dispatch);
@@ -59,7 +60,7 @@ const Cart_product = ({
     }
     axios
       .patch(
-        `https://mock-test-8th-json-server.herokuapp.com/api/Cart/${id}`,
+        `https://mock-coding.onrender.com/Cart${id}`,
         payload,
         {
           headers: {
@@ -84,7 +85,7 @@ const Cart_product = ({
               id="leftPurchaseName"
               onClick={() => navigate(`/Products/Cart/${id}`)}
             >
-              {name}
+              {title}
             </div>
             <div id="leftPurchasePrice">
               <div>
@@ -98,6 +99,7 @@ const Cart_product = ({
               MRP &nbsp; ₹<span id="mrpdash">{mrp}</span>
             </div>
           </div>
+          <div><img style={{width:"100px" , height:"100px"}} src={image} alt={title} /></div>
           <div id="removeItem">
             <div onClick={() => handleDelete()}>
               <div className="remove">
