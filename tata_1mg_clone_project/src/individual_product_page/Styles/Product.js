@@ -24,7 +24,6 @@ export const Upper_div = styled.div`
       justify-content: center;
       height: 58px;
       width: 53px;
-      border: 1px solid #ff6f61;
 
       > img {
         max-height: 100%;

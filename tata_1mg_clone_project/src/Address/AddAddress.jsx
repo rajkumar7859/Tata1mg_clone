@@ -11,14 +11,13 @@ const AddAddress = () => {
 
   const getAddress = async () => {
     let res = await fetch(
-      `https://mock-test-8th-json-server.herokuapp.com/api/address`
+      `https://mock-coding.onrender.com/address`
     );
     let data1 = await res.json();
     console.log(data1);
     setAddress(data1);
   };
 
-  // console.log(address);
 
   useEffect(() => {
     getAddress();

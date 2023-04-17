@@ -1,5 +1,4 @@
 import {
-  ADD_ADDRESS,
   ADD_TO_CART,
   ERROR,
   GET_PRODUCTS,
@@ -10,6 +9,7 @@ import {
   LOW_TO_HIGH,
   RATING,
   RELEVANCE,
+  REMOVE_ITEM,
   REVIEW,
 } from "./aciton_type";
 import axios from "axios";
@@ -21,6 +21,18 @@ export const get_data = (dispatch) => {
     // .get("https://mock-test-8th-json-server.herokuapp.com/api/Cart")
     .then((payload) => {
       dispatch({ type: ADD_TO_CART, payload: payload.data });
+    })
+    .catch((err) => {
+      dispatch({ type: ERROR });
+    });
+};
+
+export const completeOrder = () => (dispatch) => {
+  dispatch({ type: LOADING });
+  axios
+    .delete(`https://mock-coding.onrender.com/Cart`)
+    .then(() => {
+      dispatch({ type: REMOVE_ITEM });
     })
     .catch((err) => {
       dispatch({ type: ERROR });
@@ -101,6 +113,8 @@ export const Login_func = (dispatch) => {
       dispatch({ type: ERROR });
     });
 };
+
+
 
 export const Logout = () => {
   localStorage.removeItem("token");

@@ -9,12 +9,12 @@ import {
   LOW_TO_HIGH,
   RATING,
   RELEVANCE,
+  REMOVE_ITEM,
   REVIEW,
 } from "./aciton_type";
 
-import data from "../db.json"
-console.log('data:', data)
-
+import data from "../db.json";
+console.log("data:", data);
 
 let initState = {
   isLoading: false,
@@ -42,6 +42,13 @@ export const reducer = (state = initState, { type, payload }) => {
         cartData: payload,
       };
     }
+    case REMOVE_ITEM: {
+      return {
+         ...state, 
+         isLoading: false, 
+         cartData: [] 
+        };
+    }
     case ERROR: {
       return {
         ...state,
@@ -59,6 +66,7 @@ export const reducer = (state = initState, { type, payload }) => {
         token: "",
       };
     }
+   
     case GET_PRODUCTS: {
       return {
         ...state,

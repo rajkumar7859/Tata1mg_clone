@@ -2,6 +2,9 @@ import React from "react";
 import { Listed_product } from "../Styles/Product";
 
 const Small_product = ({ data }) => {
+
+  console.log("data" , data)
+
   return (
     <Listed_product>
       <div>

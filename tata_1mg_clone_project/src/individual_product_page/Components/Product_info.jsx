@@ -156,7 +156,7 @@ export const Product_info_component = ({
               data={{ image_url, name, desc, mrp, price, discount }}
             />
             <div className="style__plus">
-              <img src="https://www.1mg.com/images/add.png" alt="" />
+              <img src="https://www.1mg.com/images/add.png" alt="productImg" />
             </div>
             <Small_product
               data={Products_data[random]}

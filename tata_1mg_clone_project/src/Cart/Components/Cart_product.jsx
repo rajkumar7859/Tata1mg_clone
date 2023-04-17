@@ -60,7 +60,7 @@ const Cart_product = ({
     }
     axios
       .patch(
-        `https://mock-coding.onrender.com/Cart${id}`,
+        `https://mock-coding.onrender.com/Cart/${id}`,
         payload,
         {
           headers: {

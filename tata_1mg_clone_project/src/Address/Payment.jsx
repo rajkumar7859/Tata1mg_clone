@@ -6,6 +6,9 @@ import PayOnDelivery from "./PayOnDelivery";
 import Wallet from "./Wallet";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../Redux/Login_Auth";
+import { useDispatch } from "react-redux";
+import {completeOrder} from '../Redux/actions'
+import axios from "axios";
 
 const Payment = () => {
   const navigate = useNavigate();
@@ -23,6 +26,11 @@ const Payment = () => {
   const { cartData } = useSelector((state) => {
     return state;
   });
+const dispatch =useDispatch()
+
+  // const handlePlaceDone=()=>{
+  //   axios.delete(``)
+  // }
 
   useEffect(() => {
     m = 0;
@@ -38,11 +46,27 @@ const Payment = () => {
       setDtotal(d);
     });
   }, [change, cartData]);
+
+  // const handleSubmit = () => {
+  //   setOtpVisible(true);
+  //   alert("Order Place successful")
+  //  dispatch(completeOrder())
+  //   navigate("/")
+  // };
+
   const handleSubmit = () => {
     setOtpVisible(true);
-    alert("Order Place successfull")
-    navigate("/")
+    dispatch(completeOrder())
+      .then(() => {
+        alert("Order placed successfully");
+        // dispatch(clearCart());
+        navigate("/");
+      })
+      .catch(() => {
+        alert("There was an error placing the order. Please try again.");
+      });
   };
+
   const handleChange = () => {
     setComp("Wallet");
   };
